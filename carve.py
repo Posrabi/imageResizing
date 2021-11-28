@@ -2,10 +2,7 @@
 The third and final step in the seam carving process: removing the lowest-energy
 seam from an image. By doing so iteratively, the size of the image can be
 reduced (in one dimension) by multiple pixels.
-
-The functions you fill out in this module put together everything you've written
-so far into the full seam carving algorithm. Run this module in isolation to
-resize your image!
+Run this module in isolation to resize your image!
 
     python3 carve.py surfer.jpg 10 surfer-resized.png
 """
@@ -24,9 +21,6 @@ def remove_seam_from_image(image, seam_xs):
     x-coordinates in the input. The x-coordinates are specified from top to
     bottom and span the entire height of the image.
 
-    This is one of the functions you will need to implement. Expected return
-    value: the 2D grid of colors. The grid will be smaller than the input by
-    one element in each row, but will have the same number of rows.
     """
     for idx,_ in enumerate(image):
         i = seam_xs[idx]
@@ -44,18 +38,6 @@ def remove_n_lowest_seams_from_image(image, num_seams_to_remove):
     1. Find the lowest-energy seam in the image.
     2. Remove that seam from the image.
 
-    Repeat this process `num_seams_to_remove` times, so that the resulting image
-    has that many pixels removed in each row.
-
-    While not necessary, you may want to save the intermediate images in the
-    process, in case you want to see how the image gets progressively smaller.
-    The `visualize_seam_on_image` is available if you want to visualize the
-    lowest-energy seam at each step of the process.
-
-    This is one of the functions you will need to implement. Expected return
-    value: the 2D grid of colors. The grid will be smaller than the input by
-    `num_seams_to_remove` elements in each row, but will have the same number of
-    rows.
     """
     for i in range(num_seams_to_remove):
         energy_data = compute_energy(image) # this must be in here to create new energy_data each new iteration
