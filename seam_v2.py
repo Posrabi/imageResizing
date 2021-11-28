@@ -4,10 +4,6 @@ the lowest-energy seam in an image. In this version of the algorithm, not only
 is the energy value of the seam determined, but it's possible to reconstruct the
 entire seam from the top to the bottom of the image.
 
-The function you fill out in this module will be used as part of the overall
-seam carving process. If you run this module in isolation, the lowest-energy
-seam will be visualized:
-
     python3 seam_v2.py surfer.jpg surfer-seam-energy-v2.png
 """
 
@@ -29,9 +25,6 @@ class SeamEnergyWithBackPointer:
       - Also stores the x-coordinate for the pixel in the previous row that led
         to this particular seam energy. This is the back pointer from which the
         entire seam can be reconstructed.
-
-    You will implement this class as part of the second version of the vertical
-    seam finding algorithm.
     """
     def __init__(self, energy, back,x):
         self.energy = energy
@@ -47,15 +40,7 @@ def compute_vertical_seam_v2(energy_data):
     input image. The image energy should have been computed before by the
     `compute_energy` function in the `energy` module.
 
-    This is the second version of the seam finding algorithm. In addition to
-    storing and finding the lowest-energy value of any seam, you will also store
-    back pointers used to reconstruct the lowest-energy seam.
-
-    At the end, you will return a list of x-coordinates where you would have
-    returned a single x-coordinate instead.
-
-    This is one of the functions you will need to implement. You may want to
-    copy over the implementation of the first version as a starting point.
+    This is the second version of the seam finding algorithm
     Expected return value: a tuple with two values:
 
       1. The list of x-coordinates forming the lowest-energy seam, starting at
