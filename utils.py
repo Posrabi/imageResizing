@@ -1,9 +1,5 @@
 """
-A set of utilities that are helpful for working with images. These are utilities
-needed to actually apply the seam carving algorithm to images, but because they
-aren't core the algorithm, they are implemented for you.
-
-There is no need to change any code in this module.
+A set of utilities that are helpful for working with image.
 """
 
 
