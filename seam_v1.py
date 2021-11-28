@@ -4,9 +4,6 @@ energy seam in an image. In this version of the algorithm, only the energy value
 of the seam is determined. However, this version of the algorithm still forms
 the basis of overall seam carving process.
 
-If you run this module in isolation, the location of the _end_ of the seam will
-be visualized:
-
     python3 seam_v1.py surfer.jpg surfer-seam-energy-v1.png
 """
 
@@ -25,11 +22,7 @@ def compute_vertical_seam_v1(energy_data):
     input image. The image energy should have been computed before by the
     `compute_energy` function in the `energy` module.
 
-    This is the first version of the seam finding algorithm. You will implement
-    the recurrence relation directly, outputting the energy of the lowest-energy
-    seam and the x-coordinate where that seam ends.
-
-    This is one of the functions you will need to implement. Expected return
+    This is the first version of the seam finding algorithm. Expected return
     value: a tuple with two values:
 
       1. The x-coordinate where the lowest-energy seam ends.
@@ -65,8 +58,6 @@ def visualize_seam_end_on_image(pixels, end_x):
     """
     Draws a red box at the bottom of the image at the specified x-coordinate.
     This is done to visualize approximately where a vertical seam ends.
-
-    This is NOT one of the functions you have to implement.
     """
 
     h = len(pixels)
